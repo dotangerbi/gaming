@@ -1,0 +1,43 @@
+/* Header */
+.header {
+    background-color: #1a1a1a;
+    color: white;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 10rem;
+    padding-bottom: 0.5rem;
+}
+.header .logo img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul li:not(:last-child) {
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.navbar ul li a:hover {
+    transition: 0.3s;
+    color: #dc143c;
+}

@@ -1,0 +1,16 @@
+.casino-list {
+    padding: 2rem 0;
+}
+.casino-list h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffc107;
+}
+.casino-list .container > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.casino-list .container ul li {
+    list-style: none;
+}

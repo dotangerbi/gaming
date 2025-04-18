@@ -1,0 +1,36 @@
+/* Hero Section */
+.hero {
+    padding: 3rem 0;
+    text-align: center;
+    background: linear-gradient(145deg, #1a1a1a 40%, #2b2b2b 100%);
+}
+
+.hero h1 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.hero h1 span {
+    color: #ffc107;
+}
+
+.hero p {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+.hero a {
+    text-decoration: none;
+    padding: 1rem 3rem;
+    background-color: #dc143c;
+    border-radius: 12.5px;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+.hero a:hover {
+    background-color: #b0112b;
+    transition: 0.3s;
+}

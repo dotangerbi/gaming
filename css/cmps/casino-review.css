@@ -1,0 +1,123 @@
+.casino-review {
+    background-color: #2b2b2b;
+    padding: 80px 20px;
+    color: #fff;
+    /* text-align: center; */
+}
+.casino-review .main-layout > div:first-child {
+    width: calc(60% + 60px);
+    margin: auto;
+    position: relative;
+}
+.casino-review .main-layout > div:first-child h2 {
+    font-size: 2rem;
+}
+
+.casino-review .container .reviews-container {
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.casino-review .container .reviews-container .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.casino-review .container .reviews-container .carousel-container > div {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-item {
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    position: relative;
+    background-color: #fff; /* Seamless with dark bg */
+    border-left: 4px solid #ffc107; /* Gold accent */
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.review-item > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.review-item > div > div:last-child {
+    border-radius: 12.5px;
+    height: 5rem;
+    width: 25%;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review-item > div > div:last-child img {
+    object-fit: cover;
+    width: 50%;
+}
+.review-item h3 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.review-item > div > div:first-child p:last-child {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-weight: normal;
+}
+.review-item > div > div > div {
+    display: flex;
+}
+.review-item > div > div > div img {
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+.review-item > div > div > div p {
+    color: #1a1a1a !important;
+}
+
+.review-item > div p {
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+.review-item .rating {
+    font-size: 1.2rem;
+    color: #ffc107;
+}
+
+.reviews-container > button {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffc107;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.reviews-container > button:hover {
+    background-color: #ffc107;
+    svg path {
+        stroke: #1a1a1a;
+    }
+}
+.reviews-container button.next-review {
+    right: 0px;
+}
+.reviews-container button.prev-review {
+    left: 0;
+}
