@@ -3,7 +3,7 @@ export default {
     <header class="header">
         <div class="container main-layout">
             <div class="logo">
-                <img src="../../img/Mr-&-mrs-Bet_gold.png" alt="Logo">
+                <img src="../img/Mr-&-mrs-Bet_gold.png" alt="Logo">
             </div>
             <nav class="navbar">
                 <ul>
