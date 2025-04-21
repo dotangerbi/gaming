@@ -22,7 +22,7 @@ export default {
                                     <p>{{ review.date }}</p>
                                 </div>
                                 <div>
-                                    <img :src="'../'+review.casinoLogo" alt="">
+                                    <img :src="'./'+review.casinoLogo" alt="">
                                     <!-- <p>{{review.reviewedCasino}}</p> -->
                                 </div>
                             </div>
