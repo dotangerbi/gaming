@@ -5,7 +5,7 @@ export default {
         <div class="casino-logo">
             <div class="casino-name">
                 <div class="casino-logo-img">
-                    <img :src="'../'+casino.logo" alt="">
+                    <img :src="'./'+casino.logo" alt="">
                 </div>
                 <h4>{{casino.name}}</h4>
             </div>
@@ -44,12 +44,12 @@ export default {
             <div class="games-photos">
                 <div>
 
-                    <img src="../img/symbols/3525385_casino_chips_croupier_gamble_gambler_icon.svg" alt="">
-                    <img src="../img/symbols/5355688_casino_gambling_game_gaming_play_icon.svg" alt="">
+                    <img src="./img/symbols/3525385_casino_chips_croupier_gamble_gambler_icon.svg" alt="">
+                    <img src="./img/symbols/5355688_casino_gambling_game_gaming_play_icon.svg" alt="">
                 </div>
                 <div>
-                    <img src="../img/symbols/9517508_casino_game_iphone_slot_smartphone_icon.svg" alt="">
-                    <img src="../img/symbols/casino-chip-style-dollar-svgrepo-com.svg" alt="">
+                    <img src="./img/symbols/9517508_casino_game_iphone_slot_smartphone_icon.svg" alt="">
+                    <img src="./img/symbols/casino-chip-style-dollar-svgrepo-com.svg" alt="">
 
                 </div>
             </div>
