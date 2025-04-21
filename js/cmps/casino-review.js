@@ -13,7 +13,7 @@ export default {
                             <div>
                                 <div>
                                     <div>
-                                        <img src="../img/symbols/user-alt-1-svgrepo-com.svg" alt="">
+                                        <img src="./img/symbols/user-alt-1-svgrepo-com.svg" alt="">
                                         <p>{{review.reviewerName}}</p>
                                     </div>
                                     <p class="rating">
