@@ -125,7 +125,28 @@
 .reviews-container button.prev-review {
     left: 0;
 }
-
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .carousel-dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .carousel-dots span.active {
+    background-color: #ffc107;
+    transform: scale(1.2);
+  }
+  
 @media (max-width: 768px) {
     .casino-review {
         padding: 2rem 0;

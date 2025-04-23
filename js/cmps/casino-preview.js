@@ -11,8 +11,8 @@ export default {
             <div class="rating">
                 <h4>{{casino.name}}</h4>
                 <p class="rating-stars">★★★★★</p>
-                <p class="rating-number">4.9 <span class="rating-amount">/ 5</span></p>
-                <p><span class="rating-amount">34 Rating</span></p>
+                <p class="rating-number">{{casino.rating}} <span class="rating-amount">/ 5</span></p>
+                <p><span class="rating-amount">{{casino.numOfRates}} Rating</span></p>
             </div>
         </div>
 

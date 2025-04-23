@@ -6,10 +6,10 @@ export default {
                 <h2>Casino Reviews</h2>
             </div>
             <div class="reviews-container" >
-                <div class="carousel-container" :style="{ transform: 'translateX(-' + (currentIndex * 100) + '%)' }" 
+                <div class="carousel-container" v-if="reviews" :style="{ transform: 'translateX(-' + (currentIndex * 100) + '%)' }" 
                         @touchstart="handleTouchStart" @touchend="handleTouchEnd">
-                    <div v-if="reviews" v-for="review in reviews">
-                        <div :key="review.id" class="review-item">
+                    <div  v-for="review in reviews" :key="review.id">
+                        <div class="review-item">
                             <h3>{{ review.title }}</h3>
                             <div>
                                 <div>
@@ -43,7 +43,13 @@ export default {
                 </svg>                    
                 </button>
             </div>
+            <div class="carousel-dots">
+                <span v-for="(review, index) in reviews" :key="index"
+                :class="{ active: currentIndex === index }"
+            @click="goToSlide(index)"></span>
+            </div>
         </div>
+
     </section>
 `,
     data() {
@@ -70,10 +76,10 @@ export default {
                     date: this.getReviewDate(),
                     reviewedCasino: 'Fat Pirate',
                     casinoLogo: 'img/casino/fatPirate.png',
-                    reviewerName: 'CryptoGamer87',
-                    title: 'Fast payouts and great games!',
+                    reviewerName: 'Luke R.',
+                    title: 'Thrilling Adventures and Endless Rewards!',
                     content:
-                        "Stake.com is definitely one of the best online casinos I've used. The bonuses are great, and it's really easy to deposit with crypto. The payouts are super fast, which I love. My only issue is that they could offer more table games, but overall I'm very satisfied!",
+                        "Fat Pirate Casino instantly hooked me with its pirate-themed slots and generous bonuses! Every spin felt like a treasure hunt, and the welcome bonus was incredibly easy to claim. I've played at many casinos, but the excitement here keeps me coming back. Highly recommended for anyone looking to hit big and have fun!",
                     rating: 5,
                     pros: ['Fast payouts', 'Great bonuses', 'Crypto-friendly'],
                     cons: ['Limited table games'],
@@ -83,10 +89,10 @@ export default {
                     date: this.getReviewDate(),
                     reviewedCasino: 'Gransino',
                     casinoLogo: 'img/casino/gransino1.webp',
-                    reviewerName: 'LuckyLaura',
-                    title: 'Good variety but slow verification',
+                    reviewerName: 'Elena Novak',
+                    title: 'Luxurious Gaming with Incredible Bonuses!',
                     content:
-                        'Rolletto has a great selection of games, and I really enjoy their cashback offers. The only downside is that their verification process took a bit too long, but overall it’s been a fun experience.',
+                        'From the sleek, elegant design to their weekly promotions, Gransino has become my first choice for online gaming. The bonuses are genuinely generous, boosting my bankroll and my chances of winning. Their VIP perks make every player feel special—I’m definitely sticking around!',
                     rating: 5,
                     pros: ['Great game selection', 'Solid cashback offers'],
                     cons: ['Slow verification process'],
@@ -94,12 +100,12 @@ export default {
                 {
                     id: 3,
                     date: this.getReviewDate(),
-                    reviewedCasino: '1Red',
-                    casinoLogo: 'img/casino/1red.png',
-                    reviewerName: 'JackpotQueen',
-                    title: 'Amazing Experience – Big Wins and Fast Payouts!',
+                    reviewedCasino: 'Casino Lab',
+                    casinoLogo: 'img/casino/casinoLab.webp',
+                    reviewerName: 'Jessica Hart',
+                    title: 'A Magical Mix of Fun and Wins!',
                     content:
-                        "I couldn't be happier with my experience at Stake.com! I've tried a lot of online casinos, but this one really stands out. From the moment I signed up, I was blown away by how easy everything was – deposits were instant, and I even got a great welcome bonus to kick things off. I love playing slots, and I actually hit a nice jackpot in my first week – I couldn't believe it! What really impressed me was how fast the withdrawal process was; I had my winnings in my crypto wallet within just a few hours. The customer support team was also super friendly and helpful when I had a question. If you're looking for a fun, hassle-free place to play with great bonuses, I definitely recommend giving Stake.com a shot – it's the real deal!",
+                        "Casino Lab is hands-down the most enjoyable casino I've visited. Its vibrant, creative interface sets the mood perfectly, and the variety of games is fantastic. What really stood out was how fast they handled payouts—my winnings were in my account within hours! It’s my new favorite spot for gaming.",
                     rating: 5.0,
                     pros: [
                         'Fast payouts',
@@ -115,21 +121,21 @@ export default {
                     date: this.getReviewDate(),
                     reviewedCasino: 'Donbet',
                     casinoLogo: 'img/casino/donbet.png',
-                    reviewerName: 'JackpotQueen',
-                    title: '!!!Amazing Experience – Big Wins and Fast Payouts!',
+                    reviewerName: 'Aaron Martinez',
+                    title: 'Top-Notch Gaming Experience!',
                     content:
-                        "couldn't be happier with my experience at Stake.com! I've tried a lot of online casinos, but this one really stands out. From the moment I signed up, I was blown away by how easy everything was – deposits were instant, and I even got a great welcome bonus to kick things off. I love playing slots, and I actually hit a nice jackpot in my first week – I couldn't believe it! What really impressed me was how fast the withdrawal process was; I had my winnings in my crypto wallet within just a few hours. The customer support team was also super friendly and helpful when I had a question. If you're looking for a fun, hassle-free place to play with great bonuses, I definitely recommend giving Stake.com a shot – it's the real deal!",
+                        "Playing at Donbet Casino feels premium—great selection, smooth gameplay, and flawless mobile compatibility. Their live casino games offer immersive action, and customer service goes above and beyond. Every aspect screams quality. Absolutely worth checking out!",
                     rating: 5.0,
                 },
                 {
                     id: 5,
                     date: this.getReviewDate(),
-                    reviewedCasino: 'Europeen777',
-                    casinoLogo: 'img/casino/europeen777.png',
-                    reviewerName: 'JackpotQueen',
-                    title: '!!!Amazing Experience – Big Wins and Fast Payouts!',
+                    reviewedCasino: 'My Stake',
+                    casinoLogo: 'img/casino/myStake.jpg',
+                    reviewerName: 'Daniel Evans',
+                    title: 'Simply the Best Casino Out There',
                     content:
-                        "couldn't be srupido conmndakl; ajklsd dioajh out. From the moment I signed up, I was blown away by how easy everything was – deposits were instant, and I even got a great welcome bonus to kick things off. I love playing slots, and I actually hit a nice jackpot in my first week – I couldn't believe it! What really impressed me was how fast the withdrawal process was; I had my winnings in my crypto wallet within just a few hours. The customer support team was also super friendly and helpful when I had a question. If you're looking for a fun, hassle-free place to play with great bonuses, I definitely recommend giving Stake.com a shot – it's the real deal!",
+                        "MyStake Casino blew me away with its massive game library and constant rewards. The tournaments are thrilling, and their cashback promotions always give me extra reasons to play. Deposits and withdrawals are lightning-fast, making it an unbeatable experience. Five stars, easily!",
                     rating: 5.0,
                 },
             ]
