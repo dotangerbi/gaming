@@ -1,0 +1,316 @@
+.casino-preview {
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    margin-bottom: 2px;
+    background-color: #fff;
+    border: 2px solid #ffc107;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.casino-preview:hover {
+    transform: translateY(-5px);
+}
+
+.casino-preview > div {
+    margin: 1rem;
+    border-radius: 12.5px;
+}
+
+/* logo and name */
+.casino-preview .casino-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    height: 15rem;
+    text-align: left;
+    flex-basis: 25%;
+}
+.casino-logo .rating h4 {
+    font-size: 1.25rem;
+    color: #111111;
+}
+.casino-preview .casino-logo .casino-logo-img {
+    border-radius: 12.5px;
+    height: 7.75rem;
+    width: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.casino-preview .casino-logo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.casino-logo .rating {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 600;
+}
+.casino-preview .casino-logo .rating-stars {
+    font-size: 1.5rem;
+    color: #ffc107;
+}
+.casino-preview .casino-logo .rating-number {
+    font-size: 2rem;
+}
+.casino-preview .casino-logo .rating-amount {
+    font-size: 1.25rem;
+    color: #5c5c5cc5;
+    font-weight: 300;
+}
+/* details */
+.casino-details {
+    background-color: #f9f9f9;
+    flex-basis: 50%;
+    padding: 1rem;
+    border-radius: 12.5px;
+}
+
+.casino-details > div {
+    margin-bottom: 1rem;
+}
+.casino-details div h6 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #111;
+}
+.casino-details ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0;
+}
+.casino-details ul, .casino-details p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+}
+.casino-details ul li span {
+    margin-right: 0.25rem;
+}
+.casino-details div.casino-bonus p {
+    font-weight: 800;
+    color: #ffc107;
+}
+.casino-details .casino-wagering {
+    flex-direction: row;
+}
+.casino-details .casino-wagering p {
+    font-weight: 600;
+    color: #dc143c;
+}
+.hide-on-mobile {
+    display: block;
+}
+
+/* links */
+
+.casino-preview .casino-link {
+    flex-basis: 20%;
+    align-self: self-start;
+}
+.casino-preview .casino-link > div {
+    margin-bottom: 0.4rem;
+}
+
+.casino-preview .casino-link .games-photos {
+    padding: 0.4rem;
+    background-color: #f9f9f9;
+    border-radius: 12.5px;
+}
+.casino-preview .casino-link .games-photos div {
+    display: flex;
+    justify-content: space-around;
+}
+.casino-preview .casino-link .games-photos img {
+    width: 30%;
+}
+
+.casino-preview .casino-link .payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.casino-preview .casino-link .payment-methods svg {
+    flex-basis: 45%;
+}
+.casino-preview .casino-link a {
+    text-decoration: none;
+}
+.casino-preview .casino-link a button {
+    margin-top: 0.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #dc143c;
+    border: none;
+    border-radius: 8px;
+}
+.casino-preview .casino-link a button:hover {
+    transition: 0.3s;
+    background-color: #b0112b;
+}
+
+.casino-preview .see-more-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #888;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: 0.5rem 1rem;
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.casino-preview .see-more-btn:hover {
+    color: #dc143c;
+}
+
+@media (max-width: 768px) {
+    .casino-preview {
+        flex-direction: column;
+        align-items: stretch;
+        }
+    
+        .casino-preview > div {
+        margin: 0 0 1rem;
+        }
+        .casino-preview .casino-logo {
+            margin-top: 1rem;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            height: auto;
+        }
+        
+        .casino-preview .casino-logo .casino-name {
+            flex-basis: 65%;
+            max-width: 70%;
+        }
+        .casino-logo-img {
+            width: 100%;
+            height: 5rem;
+        }
+        .casino-logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .casino-preview .rating {
+            flex-basis: 35%;
+            text-align: left;
+            font-size: 0.75rem;
+        }
+        .casino-preview .rating h4 {
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .casino-preview .rating .rating-number {
+            font-size: 1.25rem;
+        }
+        .casino-preview .rating .rating-amount {
+            font-size: 0.9rem;
+        }
+    
+        .casino-preview .casino-logo .casino-logo-img {
+        height: 6rem;
+        }
+
+        /* Details */
+        .casino-details {
+            flex-basis: 100%;
+            padding: 0 0.5rem;
+        }
+        
+        .casino-details h6 {
+            font-size: 1.2rem;
+        }
+        
+        .casino-details p {
+            font-size: 1.1rem;
+        }
+        
+        .casino-details > div {
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .casino-details ul {
+            gap: 0.25rem;
+        }
+        .casino-details .hide-on-mobile {
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.3s ease;
+        }
+        .casino-preview.show-all .hide-on-mobile {
+            margin-bottom: 1rem;
+            display: block !important;
+            max-height: 300px; /* adjust if needed */
+            opacity: 1;
+        }
+        
+        /* Force one row for game icons */
+        .casino-link {
+            width: 100%;
+        }
+    .casino-link .games-photos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        padding: 0.5rem;
+    }
+    .casino-link .games-photos > div {
+        width: 50%;
+    }
+
+    .casino-link .games-photos img {
+        max-width: 50%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Force one row for payment methods */
+    .casino-link .payment-methods {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+    }
+
+    .casino-link .payment-methods svg {
+        max-width: 25%;
+        height: auto;
+    }
+    .casino-preview .see-more-btn {
+        display: inline-block;
+    }
+}

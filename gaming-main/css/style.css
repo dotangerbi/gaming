@@ -1,0 +1,61 @@
+@import url(pages/main-landing-page.css);
+/* General Styles */
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #111111;
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* width-layout */
+.main-layout {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 60rem) {
+    .main-layout {
+        padding: 0 0.8rem;
+    }
+}

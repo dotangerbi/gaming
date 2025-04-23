@@ -1,0 +1,230 @@
+.casino-review {
+    background-color: #2b2b2b;
+    padding: 80px 20px;
+    color: #fff;
+    /* text-align: center; */
+}
+.casino-review .main-layout > div:first-child {
+    width: calc(60% + 60px);
+    margin: auto;
+    position: relative;
+}
+.casino-review .main-layout > div:first-child h2 {
+    font-size: 2rem;
+}
+
+.casino-review .container .reviews-container {
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.casino-review .container .reviews-container .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    touch-action: pan-y; 
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+}
+.casino-review .container .reviews-container .carousel-container > div {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-item {
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    position: relative;
+    background-color: #fff; /* Seamless with dark bg */
+    border-left: 4px solid #ffc107; /* Gold accent */
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.review-item > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.review-item > div > div:last-child {
+    border-radius: 12.5px;
+    height: 5rem;
+    width: 25%;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review-item > div > div:last-child img {
+    object-fit: cover;
+    width: 50%;
+}
+.review-item h3 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.review-item > div > div:first-child p:last-child {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-weight: normal;
+}
+.review-item > div > div > div {
+    display: flex;
+}
+.review-item > div > div > div img {
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+.review-item > div > div > div p {
+    color: #1a1a1a !important;
+}
+
+.review-item > div p {
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+.review-item .rating {
+    font-size: 1.2rem;
+    color: #ffc107;
+}
+
+.reviews-container > button {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffc107;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.reviews-container > button:hover {
+    background-color: #ffc107;
+    svg path {
+        stroke: #1a1a1a;
+    }
+}
+.reviews-container button.next-review {
+    right: 0px;
+}
+.reviews-container button.prev-review {
+    left: 0;
+}
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .carousel-dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .carousel-dots span.active {
+    background-color: #ffc107;
+    transform: scale(1.2);
+  }
+  
+@media (max-width: 768px) {
+    .casino-review {
+        padding: 2rem 0;
+        }
+    
+        .casino-review .main-layout > div:first-child {
+        width: 100%;
+        text-align: center;
+        }
+    
+        .review-item {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0;
+        font-size: 0.95rem;
+        border-left: none;
+        border-top: 4px solid #ffc107;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .review-item h3 {
+        font-size: 1.2rem;
+            font-weight: 800;
+        margin-bottom: 0.75rem;
+        }
+    
+        .review-item > div {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        }
+        .review-item > div > div:first-child {
+            width: 100%;
+          }
+        
+          .review-item > div > div:first-child div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+          }
+          
+          .review-item > div > div:first-child p:last-child {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 0.25rem;
+          }
+          .review-item .rating {
+            font-size: 1rem;
+            color: #ffc107;
+            margin-bottom: 0.5rem;
+          }
+        .review-item > div > div:last-child {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 5rem;
+        }
+    
+        .review-item > div > div:last-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.8;        
+        }
+        .review-item p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+          }
+        .reviews-container > button {
+        display: none; /* Hide arrows on mobile */
+        }
+    
+        .carousel-container {
+        touch-action: pan-y;
+        cursor: grab;
+        }
+}
