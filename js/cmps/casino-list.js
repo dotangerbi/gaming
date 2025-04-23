@@ -17,7 +17,7 @@ export default {
             </div>
         </section>
     `,
-    date() {
+    data() {
         return {}
     },
 }

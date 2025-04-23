@@ -11,11 +11,10 @@ const options = {
     el: '#app',
     template: `
         <div class="all-in-one">
-          <page-header />
-          <main-landing-page />
-          <page-footer />
-</div>
-
+            <page-header />
+            <main-landing-page />
+            <page-footer />
+        </div>
     `,
 }
 

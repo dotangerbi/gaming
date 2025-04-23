@@ -6,7 +6,8 @@ export default {
                 <h2>Casino Reviews</h2>
             </div>
             <div class="reviews-container" >
-                <div class="carousel-container" :style="{ transform: 'translateX(-' + (currentIndex * 100) + '%)' }">
+                <div class="carousel-container" :style="{ transform: 'translateX(-' + (currentIndex * 100) + '%)' }" 
+                        @touchstart="handleTouchStart" @touchend="handleTouchEnd">
                     <div v-if="reviews" v-for="review in reviews">
                         <div :key="review.id" class="review-item">
                             <h3>{{ review.title }}</h3>
@@ -50,6 +51,8 @@ export default {
             reviews: null,
             currentIndex: 0,
             autoSlideInterval: null,
+            startX: 0,
+            endX: 0,
         }
     },
     created() {
@@ -134,15 +137,11 @@ export default {
         getReviewDate() {
             let day = new Date().getDate() - 1
             let month = new Date().getMonth()
-            console.log('day', day)
             if (day < 1) {
                 day = 28
                 month = new Date().getMonth() - 1
             }
             let year = new Date().getFullYear()
-            console.log(
-                new Date(Date.UTC(year, month, day)).toLocaleDateString('en-GB')
-            )
             return new Date(Date.UTC(year, month, day)).toLocaleDateString(
                 'en-GB'
             )
@@ -170,5 +169,19 @@ export default {
         stopAutoSlide() {
             clearInterval(this.autoSlideInterval)
         },
+
+        handleTouchStart(e) {
+            this.startX = e.changedTouches[0].clientX;
+        },
+
+        handleTouchEnd(e) {
+            const endX = e.changedTouches[0].clientX;
+            const diff = this.startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) this.nextSlide();     // Swipe left
+                else this.prevSlide();              // Swipe right
+            }
+        }
     },
 }

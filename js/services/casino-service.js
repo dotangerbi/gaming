@@ -26,6 +26,7 @@ const gCasinos = [
         payments: ['Visa', 'MasterCard', 'Bitcoin', 'Ethereum', 'Neteller'],
         payoutSpeed: '1-3 Days',
         winningRate: '95%',
+        rating: 5,
         link: 'https://fatpirate3.com',
         logo: 'img/casino/fatPirate.png',
     },
@@ -37,18 +38,9 @@ const gCasinos = [
         payments: ['Visa', 'MasterCard', 'Bitcoin', 'Ethereum', 'Neteller'],
         payoutSpeed: 'Fast payout, 1-3 Days',
         winningRate: '98%',
+        rating: 5,
         link: 'https://1red.com',
         logo: 'img/casino/1red.png',
-        reviews: [
-            {
-                name: 'Jason Derulo',
-                id: 'r123563221',
-                date: 'Date now()',
-                rate: '5',
-                content:
-                    'lorem ipsum askljd a asd sha adjsklhdawkjdhaskjdb dfo;aiueoqwi cn vmcvsk',
-            },
-        ],
     },
     {
         name: 'Donbet',
@@ -64,6 +56,7 @@ const gCasinos = [
         payments: ['Visa', 'MasterCard', 'Bitcoin', 'Ethereum', 'Neteller'],
         payoutSpeed: '1 for crypto, 1-5 Days for e-wallets and bank transfers',
         winningRate: '95%-98%',
+        rating: 5,
         link: 'https://Donbet.com',
         logo: 'img/casino/donbet.png',
     },
@@ -75,6 +68,7 @@ const gCasinos = [
         payments: ['Credit card', 'e-wallet', 'Cryptocurrency'],
         payoutSpeed: '1-5 Days',
         winningRate: '97% for table games and slots',
+        rating: 5,
         link: 'https://Europeen777.com',
         logo: 'img/casino/europeen777.png',
     },

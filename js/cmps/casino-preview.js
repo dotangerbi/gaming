@@ -1,16 +1,18 @@
 export default {
     props: ['casino'],
     template: `
-    <div class="casino-preview">
+    <div class="casino-preview" :class="{ 'show-all': showMore }">
         <div class="casino-logo">
             <div class="casino-name">
                 <div class="casino-logo-img">
                     <img :src="'./'+casino.logo" alt="">
                 </div>
-                <h4>{{casino.name}}</h4>
             </div>
-            <div>
-                <a href="">More details</a>
+            <div class="rating">
+                <h4>{{casino.name}}</h4>
+                <p class="rating-stars">★★★★★</p>
+                <p class="rating-number">4.9 <span class="rating-amount">/ 5</span></p>
+                <p><span class="rating-amount">34 Rating</span></p>
             </div>
         </div>
 
@@ -23,19 +25,19 @@ export default {
                 <h6>Wagering: </h6>
                 <p>{{casino.wagering}}</p>
             </div>
-            <div class="casino-categories">
+            <div class="casino-categories hide-on-mobile">
                 <h6>Games:</h6>
                 <ul>
                     <li v-for="(category, idx) in casino.categories">{{category}}<span v-if="idx !== casino.categories.length - 1">, </span> </li>
                 </ul>
             </div>
-            <div class="casino-payments">
+            <div class="casino-payments hide-on-mobile">
                 <h6>Payments methods:</h6>
                 <ul>
                     <li v-for="(payment, idx) in casino.payments " >{{payment}}<span v-if="idx !== casino.payments.length - 1">, </span></li>
                 </ul>
             </div>
-            <div class="casino-payout-speed">
+            <div class="casino-payout-speed hide-on-mobile">
                 <h6>Payout speed: </h6>
                 <p>{{casino.payoutSpeed}}</p>
             </div>
@@ -100,6 +102,19 @@ export default {
             </div>
             <a :href="casino.link" target=”_blank”><button>Play now!</button></a>
         </div>
+        <button class="see-more-btn" @click="toggleDetails">
+            {{ showMore ? 'Show Less' : 'See More' }}
+        </button>
     </div>
 `,
+data() {
+    return {
+        showMore: null
+    }
+},
+methods: {
+    toggleDetails() {
+        this.showMore = !this.showMore;
+    }
+},
 }

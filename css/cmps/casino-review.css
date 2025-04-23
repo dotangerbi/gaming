@@ -22,6 +22,10 @@
 .casino-review .container .reviews-container .carousel-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
+    touch-action: pan-y; 
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
 }
 .casino-review .container .reviews-container .carousel-container > div {
     min-width: 100%;
@@ -120,4 +124,86 @@
 }
 .reviews-container button.prev-review {
     left: 0;
+}
+
+@media (max-width: 768px) {
+    .casino-review {
+        padding: 2rem 0;
+        }
+    
+        .casino-review .main-layout > div:first-child {
+        width: 100%;
+        text-align: center;
+        }
+    
+        .review-item {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0;
+        font-size: 0.95rem;
+        border-left: none;
+        border-top: 4px solid #ffc107;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .review-item h3 {
+        font-size: 1.2rem;
+            font-weight: 800;
+        margin-bottom: 0.75rem;
+        }
+    
+        .review-item > div {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        }
+        .review-item > div > div:first-child {
+            width: 100%;
+          }
+        
+          .review-item > div > div:first-child div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+          }
+          
+          .review-item > div > div:first-child p:last-child {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 0.25rem;
+          }
+          .review-item .rating {
+            font-size: 1rem;
+            color: #ffc107;
+            margin-bottom: 0.5rem;
+          }
+        .review-item > div > div:last-child {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 5rem;
+        }
+    
+        .review-item > div > div:last-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.8;        
+        }
+        .review-item p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+          }
+        .reviews-container > button {
+        display: none; /* Hide arrows on mobile */
+        }
+    
+        .carousel-container {
+        touch-action: pan-y;
+        cursor: grab;
+        }
 }
